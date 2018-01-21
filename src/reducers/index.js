@@ -11,7 +11,7 @@ export default (balance = 1234.56, action) => {
         return balance + +action.payload; // adding a '+' before action.payload coerces the payload into a positive number, similar to parsing it as a number
         case WITHDRAWAL:
         // decrement the balance;
-        return balance - Number(action.payload);
+        return balance - Number(action.payload); // this is another method for parsing it as a number
         default:
         // return the balance
         return balance;
